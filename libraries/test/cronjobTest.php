@@ -15,6 +15,6 @@ $date = date( "Y-m-d H:i:s", time() );
 
 $result = $mysqli->query( "INSERT INTO `sandbox`.`test_cron_job` (`id`, `today`) VALUES (NULL, '" . $date . "');" );
 
-echo ("ver1.1");
+echo ("ver1.1 test uploader");
 
-//INSERT INTO `sandbox`.`test_cron_job` (`id`, `today`) VALUES (NULL, '2021-09-02 00:00:00');
+//test uploader

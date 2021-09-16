@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+  }
+  .bg {
+    height: 100%; 
+  }
+
+  .btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+
+.cover-container {
+  max-width: 42em;
+}

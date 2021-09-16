@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CheckIn.css'>
+    <script src='CK.js'></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body class="d-flex h-100 text-center text-white bg-primary">
+    <div class="cover-container d-flex p-3 mx-auto flex-column w-100 h-100">
+        <div class="px-3" id="enterPhone">
+            <h1>Enter phone number to Check-In</h1>
+            <form>
+                <input class="form-control form-control-lg" type="text" placeholder="+641"
+                    aria-label=".form-control-lg example" id="phoneNumber">
+                <button type="button" class="btn btn-light" onclick="checkIn()"
+                    style="margin-top: 20px;">Check-In</button>
+            </form>
+
+        </div>
+        <div class="position-absolute top-50 start-50 translate-middle" id="ShowInformation"
+            style="display: none; width: 500px;">
+            <h1>Information</h1>
+            <div class="list-group">
+                <div class="list-group-item ">Given name: </div>
+                <div class="list-group-item">Sur name: </div>
+                <div class="list-group-item">Gender: </div>
+                <div class="list-group-item">DOB: </div>
+                <div class="list-group-item">Email: </div>
+                <div class="list-group-item">Address: </div>
+                <div class="list-group-item">ID: </div>
+                <div class="list-group-item">First vaccine Status: </div>
+                <div class="list-group-item">Second vaccine Status: </div>
+            </div>
+            <form>
+                <div class="form-check" name="checkbox" style="margin-top: 20px;">
+                    <input type="checkbox" name="checkbox">
+                    <label class="form-check-label">
+                        Click if all information correct
+                    </label>
+                </div>
+                <button type="button" class="btn btn-light" onclick="goBack()" style="margin-top: 20px;">GO
+                    BACK</button>
+                    <input type="submit" class="btn btn-light" value="submit" style="margin-top: 20px;" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false;} goBack();"  />
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

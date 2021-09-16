@@ -64,7 +64,7 @@ while( $row = $result->fetch_assoc() ) {
 	$queueAttempted = intval($row['attempted']);
 
 		
-	// Create participate urvey link with token
+	// Create participate survey link with token
 	// @param string $participateEmaill Participate's email address
 	// @param string $participateLastName Participate's lastname
 	// @param string $participateFirstName Participate's firstname

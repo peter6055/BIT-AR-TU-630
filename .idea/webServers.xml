@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ea30d2ba-6456-4e38-ad57-32fb8c996e29" name="Prod (web-centos-project-prod-a)" url="https://covid-vaccine.tech">
+        <fileTransfer rootFolder="/covid-vaccine.tech" host="n39575.prod.ftp.covid-vaccine.tech" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="ef3aa2b1-b140-46ec-8d63-07073f2322d4" name="Sand (web-centos-project-prod-a)" url="https://sandbox.covid-vaccine.tech">
+        <fileTransfer rootFolder="/sandbox.covid-vaccine.tech" host="n39575.prod.ftp.covid-vaccine.tech" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" showHiddenFiles="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

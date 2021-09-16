@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Prod (web-centos-project-prod-a)" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Prod (web-centos-project-prod-a)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/libraries" local="$PROJECT_DIR$/libraries" web="/libraries" />
+            <mapping deploy="/accounts" local="$PROJECT_DIR$/accounts" web="/accounts" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Sand (web-centos-project-prod-a)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/libraries" local="$PROJECT_DIR$/libraries" web="/libraries" />
+            <mapping deploy="/accounts" local="$PROJECT_DIR$/accounts" web="/accounts" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
