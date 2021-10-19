@@ -5,8 +5,7 @@
       <paths name="Prod (web-centos-project-prod-a)">
         <serverdata>
           <mappings>
-            <mapping deploy="/libraries" local="$PROJECT_DIR$/libraries" web="/libraries" />
-            <mapping deploy="/accounts" local="$PROJECT_DIR$/accounts" web="/accounts" />
+            <mapping deploy="/" local="$PROJECT_DIR$/" web="/" />
           </mappings>
         </serverdata>
       </paths>
@@ -14,7 +13,6 @@
         <serverdata>
           <mappings>
             <mapping deploy="/libraries" local="$PROJECT_DIR$/libraries" web="/libraries" />
-            <mapping deploy="/accounts" local="$PROJECT_DIR$/accounts" web="/accounts" />
           </mappings>
         </serverdata>
       </paths>
