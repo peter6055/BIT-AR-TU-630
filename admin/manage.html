@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <title>manage staff</title>
+  
+    <link rel="stylesheet" href="css/style.css">
+	<script src = "js/staff.js" type="text/javascript"></script>     
+	<script type="application/javascript" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>     
+
+</head>
+
+  
+	
+<body style="background-image: url('images/01.png'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+
+    <div class="header">
+    <div class="header-wrap">
+       
+		
+       
+        <div class="header-nav-left"><ul>
+      <li><a class="active" href="#home">S-TEAM</a></li>
+  <li><a href="#news">COVID-19</a></li>
+  <li><a href="#contact">STAFF</a></li>
+  <li style="float:right"><a href="#about">LOGIN</a></li>
+          </ul>
+
+
+
+        
+   </div>   
+
+
+
+			
+	</div>
+			
+         
+  <div class="main">
+        <!-- 主体左 -->
+        
+ <div class="main-left">
+            <ul>
+                <li><a href="#">PROFILE</a></li>
+                <li><a href="#">APPOINTMENT</a></li>
+                <li><a href="#">SURVEY</a></li>
+				<li class="main-border"><a href="#">STAFF MANAGEMENT</a></li>
+                <li><a href="user_management.html">USER MANAGEMENT</a></li>
+            </ul>
+        </div>
+
+
+        <!-- 主体右 -->
+        <div class="main-right">
+            <div class="main-right-wrap">
+                <div class="title">
+                    <h6>MANAGEMENT</h6>
+                </div>
+                <form action="">
+                   <div>
+			<button type="button" onclick="showPersons();">SHOW ALL STAFF</button>
+			<button type="button" onclick="showAddForm();">ADD STAFF</button>
+			
+
+				
+           <div class="pagination">
+  <div class="pagination1" id="pagination1"></div></div>
+                
+        
+
+
+	</div>
+		<div>
+			<table border="1" id="tb1" class="data">
+			 <div id="pagination"><input type="button" id="first_page"  value="first"/>
+					<input type="button"  value="previous"/>
+					<input type="button" id="next_page" value="next"/>
+					<input type="button"  value="last"/>
+					<input type="button"  id="jump_page" value="jump"/>
+    <input autocomplete="off" class="ui-autocomplete-input" id="page_no" /><input type="button" id="total_page" value="0 page" />
+				<tbody> 
+			
+				</tbody>	</div>
+				
+		<div id="form1" style="display: none;">
+			<form method="post" action="#" onsubmit="addPerson();return false;" >
+				
+				<fieldset>
+					<legend>ADD STAFF</legend>
+					<table>
+						
+						<tr>
+							<td>GIVEN NAME:</td>
+							<td>
+								 <input type="text" class="tab" required="required" id="Givenname" placeholder="Given name">
+                <div id="givenNameError">Can't be none</div>
+							</td>
+						</tr>
+						<tr>
+							<td>SURNAME:</td>
+							<td>
+								<input type="text" class="tab" required="required" id="Surname" placeholder="Surname">
+                <div id="surNameError">Can't be none</div>
+							</td>
+						</tr>
+						<tr>
+							<td>GENDER:</td>
+							<td>
+								<select name="Gender" class="tab" id="Gender">
+                    <option value="null" disabled selected hidden style="color: aqua;">Please select a gender</option>
+                    <option value="other">Other</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>            
+							</td>
+						</tr>
+						<tr>
+							<td>DOB:</td>
+							<td>
+								 <input type="date" class="tab" id="Birthday" placeholder="DOB">
+                <div id="birthdayError">Can't be none</div>
+							</td>
+						</tr>
+						<tr>
+							<td>EMP ID:</td>
+							<td>
+								 <input type="tel" class="tab" id="EMPID" placeholder="EMP ID">
+              
+                <div id="empidError">Can't be none</div>
+							</td>
+						</tr>
+						<tr>
+							<td>PHONE NUMBER:</td>
+							
+						
+							<td>
+							 <input type="tel" class="tab" id="Phonenumber" placeholder="Phonenumber">
+						</td><td>
+						
+                
+                <input id="inputCode" placeholder="Six-digit verification code" >
+					<a href="javascript:" style="margin-top: 1px; margin-bottom: 0px; margin-right: 0px; margin-left: 0px; height: 30px; padding-top: 9px; " onclick="showLogin()">GET CODE</a>
+							</td>
+						</tr>
+					
+						<tr>
+							<td colspan="2">
+								<button type="submit">SUBMIT</button>
+								<button type="reset" onclick="hideForm('form1');">CANCEL</button>
+							</td>
+						</tr>
+						
+						
+					</table>
+					
+				</fieldset>
+				
+			</form>
+		</div>
+		
+		
+		<div id="form2" style="display: none;">
+			<form method="post" action="#" onsubmit="updatePerson();return false;">
+				<input type="hidden" id="upid" />
+				<fieldset><legend>EDIT</legend>
+					<table>
+						<tr>
+							<td>GIVEN NAME:</td>
+							<td>
+								 <input type="text" class="tab" required="required" id="upgname" placeholder="Given name" style="display:none;"/>
+               
+							</td>
+						</tr>
+						<tr>
+							<td>SURNAME:</td>
+							<td>
+								<input type="text" class="tab" required="required" id="upsname" placeholder="Surname">
+               
+							</td>
+						</tr>
+						<tr>
+							<td>GENDER:</td>
+							<td>
+								<select name="Gender" class="tab" id="uGender">
+                    <option value="null" disabled selected hidden style="color: aqua;">Please select a gender</option>
+                    <option value="other">Other</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>            
+							</td>
+						</tr>
+						<tr>
+							<td>DOB:</td>
+							<td>
+								 <input type="date" class="tab" id="uBirthday" placeholder="DOB">
+                
+							</td>
+						</tr>
+						<tr>
+							<td>EMP ID:</td>
+							<td>
+								 <input type="tel" class="tab" id="uEMPID" placeholder="EMP ID">
+              
+            
+							</td>
+						</tr>
+						<tr>
+							<td>PHONE NUMBER:</td>
+							
+						
+							<td>
+							 <input type="tel" class="tab" id="uPhonenumber" placeholder="Phonenumber">
+						</td>
+						</tr>
+					
+						<tr>
+							<td colspan="2">
+								<button type="submit">SUBMIT</button>
+								<button type="reset" onclick="hideForm('form1');">CANCEL</button>
+							</td>
+						</tr>
+						
+					</table>
+				</fieldset>
+			</form>
+
+</div>
+		
+</body>
+
+</html>
