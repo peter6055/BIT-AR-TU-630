@@ -135,7 +135,7 @@ padding-left: unset;" onclick="showLogin()">GET CODE</button>
             </div>
         </div>
     </div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkyfxNanqoKYHzHlmsXx5y4VK0NDhY1p0&libraries=places&callback=initMap&channel=GMPSB_addressselection_v1_cA&language=en_US" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap&channel=GMPSB_addressselection_v1_cA&language=en_US" async defer></script>
     <script src="js/index.js"></script>
 
 </body>
