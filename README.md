@@ -1,1 +1,2 @@
+In this course, we developed a COVID-19 vaccination appointment system enabling users to book vaccine appointments, receive notifications, and complete health surveys for follow-up. Outcome: The system is fully hosted on GCP using multiple Centos 7 docker containers.  We implemented an OTP login system powered by Firebase authentication, SMS notification by Twilio and token-based follow-up survey by LimeSurvey and Crontab.
 ***Please notes: All the credential or password are either expired or remove from service provider.***
